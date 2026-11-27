@@ -1,0 +1,495 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(247, 245, 173);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header{
+  background-color: rgb(127, 212, 137);
+  color: rgb(6, 80, 6);
+}
+main{
+  padding: 25px;
+}
+
+.game-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+
+.game-card{
+  background-color: pink;
+  color: black;
+  width: 220px;
+  padding: 5px;
+  box-shadow: 0 3px 10px;
+}
+
+button{
+  background-color: plum;
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: gray;
+}
+
+#game-area{
+  background-color: rgb(127, 212, 137);
+  margin: 30px auto;
+  padding: 1px;
+  border-radius: 15px;
+  max-width: 700px;
+  min-height: 100px;
+}
+
+/*QUIZ GAME*/
+
+.answer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.answer-btn {
+  background-color: palevioletred;
+  color: whitesmoke;
+  border: 2px solid palevioletred;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.answer-btn:hover.not(:disabled) {
+  background-color: #d9d2ff;
+}
+
+.answer-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+#next-btn {
+  margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+  .answer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*MEMORY CARD GAME*/
+
+.memory-info {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 20px 0;
+  color: deeppink;
+  font-weight: bold;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 450px;
+  margin: 20px auto;
+}
+
+.memory-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: 30px;
+  background-color: pink;
+  border: 3px solid palevioletred;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.memory-card:hover {
+  background-color: white;
+}
+
+.memory-card.flipped {
+  background-color: rgb(222, 216, 216);
+  border-color: rgb(161, 80, 107);
+}
+
+.memory-card.matched {
+  background-color: rgb(107, 185, 121);
+  border-color: green;
+  cursor: default;
+}
+
+@media (max-width: 500px) {
+.memory-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.memory-card {
+  font-size: 10px;
+}
+
+.memory-info {
+  font-size: 5px;
+}
+}
+
+/*WORD GUESS*/
+
+.word-game {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* JUDUL GAME */
+.word-game h2 {
+    color: #22543d;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.word-subtitle {
+    color: #6b8e73;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* INFORMASI SOAL DAN SKOR */
+.word-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background-color: #edf7ee;
+    color: #22543d;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* PROGRESS BAR */
+.word-progress {
+    width: 100%;
+    height: 9px;
+    background-color: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.word-progress-fill {
+    height: 100%;
+    background-color: #4caf70;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+/* PETUNJUK */
+.word-clue {
+    background-color: #f0f7e9;
+    border-left: 5px solid #4caf70;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.word-clue h3 {
+    color: #276749;
+    margin-top: 0;
+}
+
+.word-clue p {
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* INSTRUKSI */
+.word-instruction {
+    color: #333333;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.answer-title {
+    color: #22543d;
+    margin-top: 25px;
+}
+
+/* TOMBOL HURUF */
+.letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.letter-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4caf70;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.letter-btn:hover:not(:disabled) {
+    background-color: #276749;
+    transform: translateY(-3px);
+}
+
+.letter-btn:disabled {
+    background-color: #d1d5db;
+    color: #777777;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* AREA JAWABAN */
+.answer-slots {
+    min-height: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 12px;
+    background-color: #f5f8f4;
+    border: 2px dashed #a3bfa8;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.empty-answer {
+    color: #999999;
+    font-size: 14px;
+}
+
+.selected-letter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 42px;
+    background-color: #fff1c9;
+    color: #76531a;
+    border: 1px solid #e7c875;
+    border-radius: 7px;
+    font-size: 19px;
+    font-weight: bold;
+    animation: letterAppear 0.2s ease;
+}
+
+@keyframes letterAppear {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* FEEDBACK JAWABAN */
+#word-feedback {
+    min-height: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* TOMBOL GAME */
+.word-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.word-buttons button,
+.word-next-btn,
+.result-buttons button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.word-clear-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.word-clear-btn:hover {
+    background-color: #d1d5db;
+}
+
+.word-check-btn {
+    background-color: #276749;
+    color: white;
+}
+
+.word-check-btn:hover {
+    background-color: #1b4332;
+}
+
+.word-next-btn {
+    background-color: #eabf55;
+    color: #493510;
+    margin-top: 20px;
+}
+
+.word-next-btn:hover {
+    background-color: #d9a832;
+    transform: translateY(-2px);
+}
+
+.word-next-btn[hidden] {
+    display: none;
+}
+
+/* HASIL AKHIR */
+.word-result {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.result-message-title {
+    color: #276749;
+    line-height: 1.5;
+    margin: 25px 0;
+}
+
+.result-score {
+    display: inline-block;
+    padding: 20px 35px;
+    margin: 10px 0 25px;
+    background-color: #edf7ee;
+    color: #22543d;
+    border-radius: 15px;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.result-message {
+    background-color: #f8faf7;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.result-message p {
+    color: #444444;
+    padding: 5px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.result-message p:last-child {
+    border-bottom: none;
+}
+
+/* TOMBOL HASIL */
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.word-replay-btn {
+    background-color: #276749;
+    color: white;
+}
+
+.word-replay-btn:hover {
+    background-color: #1b4332;
+}
+
+.word-menu-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.word-menu-btn:hover {
+    background-color: #d1d5db;
+}
+
+/* RESPONSIVE - HP */
+@media screen and (max-width: 600px) {
+
+    .word-game {
+        padding: 18px 12px;
+    }
+
+    .word-game h2 {
+        font-size: 23px;
+    }
+
+    .word-info {
+        font-size: 13px;
+    }
+
+    .word-instruction {
+        font-size: 15px;
+    }
+
+    .letter-container {
+        gap: 7px;
+    }
+
+    .letter-btn {
+        width: 39px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .selected-letter {
+        width: 30px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .word-buttons button,
+    .result-buttons button {
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+
+    .result-score {
+        font-size: 30px;
+    }
+}

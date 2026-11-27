@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Mini Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+
+    <header>
+      <h1>🎮 Mini Game</h1>
+      <p>Play, Learn, and Have Fun!</p>
+    </header>
+
+    <main>
+     <h2>Pilih Permainanmu!</h2>
+     
+     <div class="game-container">
+
+      <div class="game-card">
+        <h3>🧠 Quiz Game</h3>
+        <p>Uji Pengetahuanmu disini!</p>
+        <button onclick="startGame('quiz')">
+          Mainkan
+          </button>
+      </div>
+
+      <div class="game-card">
+        <h3>🃏Memory Card</h3>
+        <p>Temukan Pasangan Kartunya!</p>
+        <button onclick="startGame('memory')">
+          Mainkan
+        </button>
+      </div>
+
+      <div class="game-card">
+        <h3>🤔  Word Guess</h3>
+        <p>Tebak Katanya!</p>
+        <button onclick="startGame('word')">
+          Mainkan
+        </button>
+      </div>
+
+     </div>
+
+     <section id="game-area">
+      <h2>Selamat Bermain</h2>
+      <p>Pilih Salah Game Untuk Menguji Kemampuanmu!</p>
+     </section>
+    </main>
+
+      <script src="script.js"></script>
+  </body>
+</html>
